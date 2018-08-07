@@ -28,29 +28,4 @@ public class UserDaoImpl implements UserDao {
                 .setString(0, username).uniqueResult();
         return user;
     }
-
-//    /**
-//     * 获取当前用户的ID
-//     * @return
-//     */
-//    @Override
-//    public int getNowUserId() {
-//        HostHolder hostHolder = (HostHolder) session
-//                .createQuery("from HostHolder where nowId = nowId").uniqueResult();
-//        tx.commit();
-//        return hostHolder.getId();
-//    }
-//
-//    /**
-//     * 存取当前用户的ID
-//     * @param id
-//     */
-//    @Override
-//    public void setNowUserId(int id) {
-//        HostHolder hostHolder = (HostHolder) session.get(HostHolder.class,"nowId");
-//        hostHolder.setId(id);
-//        session.update(hostHolder);
-//        tx.commit();
-//
-//    }
 }
