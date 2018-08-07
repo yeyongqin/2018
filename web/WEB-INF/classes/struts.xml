@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.i18n.encoding" value="GBK"/>
+    <!--  指定控制器类的后缀为 Controller -->
+    <constant name="struts.convention.action.suffix"
+              value="Controller"/>
+    <constant name="struts.convention.action.mapAllMatches"
+              value="true"/>
+    <!-- 指定 Action 所在包继承的父包 -->
+    <constant name="struts.convention.default.parent.package"
+              value="rest-default"/>
+    <!--设置前端能接收到的websocket的URL格式-->
+    <constant name="struts.action.excludePattern" value="/websocket"></constant>
+
+    <!-- 设置向前端传的值为JSON类型 -->
+    <package name="default" namespace="/" extends="struts-default,json-default">
+        <action name="index"  class="com.web.action.IndexController" >
+            <result name="index" type="json">
+                <param name="root">msg</param>
+            </result>
+            <result name="success" type="json">
+                <param name="root">msg</param>
+            </result>
+        </action>
+        <action name="login"  class="com.web.action.LoginController" >
+            <result name="success" type="json">
+                <param name="root">msg</param>
+            </result>
+        </action>
+    </package>
+
+</struts>

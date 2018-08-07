@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.web.vo.Index" table="index_summary">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="indexName" column="indexName"/>
+        <property name="indexType" column="indexType"/>
+        <property name="fineTerm" column="fineTerm"/>
+        <property name="score" column="score"/>
+        <property name="caliber" column="caliber"/>
+        <property name="challengeValue" column="challengeValue"/>
+        <property name="completionTimeLimit" column="completionTimeLimit"/>
+        <property name="responsibleGroup" column="responsibleGroup"/>
+        <property name="responsiblePeople" column="responsiblePeople"/>
+        <property name="currentProgress" column="currentProgress"/>
+        <property name="description" column="description"/>
+    </class>
+</hibernate-mapping>

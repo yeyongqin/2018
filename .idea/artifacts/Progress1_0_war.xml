@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="Progress1.0:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/Progress1_0_war</output-path>
+    <root id="archive" name="Progress1.0_war.war">
+      <element id="artifact" artifact-name="Progress1.0:war exploded" />
+    </root>
+  </artifact>
+</component>

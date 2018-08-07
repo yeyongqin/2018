@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--建立映射-->
+    <class name="com.web.vo.User" table="user">
+        <!--主键-->
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <!--字段映射-->
+        <property name="username" column="username"/>
+        <property name="password" column="password"/>
+        <property name="name" column="name"/>
+        <property name="flag" column="flag"/>
+    </class>
+</hibernate-mapping>
