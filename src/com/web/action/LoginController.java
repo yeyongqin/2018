@@ -33,7 +33,7 @@ public class LoginController extends ActionSupport implements ServletRequestAwar
     LoginService loginService = new LoginServiceImpl();
 
     /**
-     * 登录页面，验证登录信息
+     * 登录页面，验证登录的信息
      * @return "success"
      * @throws IOException
      */
